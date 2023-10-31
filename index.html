@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Vue.js Calculator</title>
+</head>
+
+<body>
+    <h1>Simple Calculator using Vue.js</h1>
+
+    <div class="formstyle">
+        <div id="calculator">
+            <input type="text" v-model="expression" placeholder="Enter number">
+            <br><br>
+            <div class="buttons">
+                <button v-on:click="addToExpression(1)">1</button>
+                <button v-on:click="addToExpression(2)">2</button>
+                <button v-on:click="addToExpression(3)">3</button>
+                <button v-on:click="addToExpression('+')">+</button>
+            </div>
+            <br><br>
+            <div class="buttons">
+                <button v-on:click="addToExpression(4)">4</button>
+                <button v-on:click="addToExpression(5)">5</button>
+                <button v-on:click="addToExpression(6)">6</button>
+                <button v-on:click="addToExpression('-')">-</button>
+            </div>
+            <br><br>
+            <div class="buttons">
+                <button v-on:click="addToExpression(7)">7</button>
+                <button v-on:click="addToExpression(8)">8</button>
+                <button v-on:click="addToExpression(9)">9</button>
+                <button v-on:click="addToExpression('*')">*</button>
+            </div>
+            <br><br>
+            <div class="buttons">
+                <button v-on:click="addToExpression('/')">/</button>
+                <button v-on:click="addToExpression(0)">0</button>
+                <button v-on:click="addToExpression('.')">.</button>
+                <button v-on:click="calculateResult()">=</button>
+            </div>
+            <br>    
+            <br>
+            <button v-on:click="clearExpression()" id="clear">Clear All</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
