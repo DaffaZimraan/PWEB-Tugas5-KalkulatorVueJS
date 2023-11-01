@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:lightsteelblue; 
+}
+
+ul {
+    list-style: none; 
+    padding: 0;
+}
+
+li {
+    padding: 8px 0; 
+    cursor: pointer; 
+}
+
+.toggle {
+    background-color:indianred; 
+}

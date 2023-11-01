@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Implementasi Vue.JS</title>
+</head>
+<body>
+    <h1>Implementasi Vue.JS </h1>
+
+    <div id="app">
+        <ul>
+            <li v-for="buku in listBuku" :class="{ toggle: buku.isToggle }" v-on:click="toggleBuku(buku)">
+                <p>{{buku.judul}} - {{buku.pengarang}}</p>
+            </li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
